@@ -23,6 +23,7 @@ jQuery("div.ctl").eq(8).hide()
 jQuery("div.ctl").eq(2).appendTo("#test")
 jQuery("div.ctl").eq(2).removeAttr("style")
 jQuery("div.ctl").eq(2).css({"right":"150px","position":"absolute"});
+jQuery("#wfcdiv0").css({"width":"1100px"});
 jQuery("form[name='form1']").insertAfter("#chatboxspan");
 jQuery("p").hide();
 
