@@ -61,7 +61,7 @@ chatnewline  = hijack(chatnewline , function(user_args){
 	var args = user_args;
  
 	// Mess with the arguments passed in
-	if(args[0]){args[0] = 'TEST:' + args[0]};
+	//if(args[0]){args[0] = 'TEST:' + args[0]};
  
 	// Put some stuff in here to update our new chatbox
 
