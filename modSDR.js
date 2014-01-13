@@ -32,6 +32,10 @@ if(window.screen.availWidth >= 1600)
 jQuery("form[name='form1']").insertAfter("#chatboxspan");
 jQuery("p").hide();
 
+// Add UTC time above chatbox
+jQuery("#chatboxspan").prepend("<DIV id=time>TIME</div>");
+setInterval(function(){jQuery("#time").html(new Date().toUTCString())},1000);
+
 jQuery(document).ready(function() {
   setcompactview(true);
   jQuery("#compactviewcheckbox").prop('checked', true);
