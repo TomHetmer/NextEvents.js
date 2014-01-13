@@ -19,11 +19,16 @@ whenAvailable("jQuery", function(t){
 jQuery("div.ctl").eq(6).hide()
 jQuery("div.ctl").eq(7).hide()
 
-//Move saved frequencies
-jQuery("div.ctl").eq(2).appendTo("#test")
-jQuery("div.ctl").eq(2).removeAttr("style")
-jQuery("div.ctl").eq(2).css({"right":"150px","position":"absolute"});
-jQuery("#wfcdiv0").css({"width":"1050px"});
+//Move saved frequencies if there is enough vertical space
+if(window.screen.availWidth >= 1600)
+{
+  jQuery("div.ctl").eq(2).appendTo("#test")
+  jQuery("div.ctl").eq(2).removeAttr("style")
+  jQuery("div.ctl").eq(2).css({"right":"150px","position":"absolute"});
+  jQuery("#wfcdiv0").css({"width":"1050px"});
+}
+
+// Move the user frequency control to the bottom
 jQuery("form[name='form1']").insertAfter("#chatboxspan");
 jQuery("p").hide();
 
