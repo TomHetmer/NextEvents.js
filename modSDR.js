@@ -2,6 +2,37 @@ var jq = document.createElement('script');
 jq.src = "//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js";
 document.getElementsByTagName('head')[0].appendChild(jq);
 
+function whenAvailable(name, callback) {
+    var interval = 10; // ms
+    window.setTimeout(function() {
+        if (window[name]) {
+            callback(window[name]);
+        } else {
+            window.setTimeout(arguments.callee, interval);
+        }
+    }, interval);
+}
+
+whenAvailable("jQuery", function(t){
+
+// Hide Logbook
+jQuery("div.ctl").eq(7).hide()
+jQuery("div.ctl").eq(8).hide()
+
+//Move saved frequencies
+jQuery("div.ctl").eq(2).appendTo("#test")
+jQuery("div.ctl").eq(2).removeAttr("style")
+jQuery("div.ctl").eq(2).css({"right":"150px","position":"absolute"});
+jQuery("form[name='form1']").insertAfter("#chatboxspan");
+jQuery("p").hide();
+
+jQuery(document).ready(function() {
+  setcompactview(true);
+  jQuery("#compactviewcheckbox").prop('checked', true);
+});
+
+});
+
 // Hijack chatbox
 
 function hijack(method, cb){
@@ -39,33 +70,3 @@ chatnewline  = hijack(chatnewline , function(user_args){
 });
 
 
-function whenAvailable(name, callback) {
-    var interval = 10; // ms
-    window.setTimeout(function() {
-        if (window[name]) {
-            callback(window[name]);
-        } else {
-            window.setTimeout(arguments.callee, interval);
-        }
-    }, interval);
-}
-
-whenAvailable("jQuery", function(t){
-
-// Hide Logbook
-jQuery("div.ctl").eq(7).hide()
-jQuery("div.ctl").eq(8).hide()
-
-//Move saved frequencies
-jQuery("div.ctl").eq(2).appendTo("#test")
-jQuery("div.ctl").eq(2).removeAttr("style")
-jQuery("div.ctl").eq(2).css({"right":"150px","position":"absolute"});
-jQuery("form[name='form1']").insertAfter("#chatboxspan");
-jQuery("p").hide();
-
-jQuery( document ).ready(function() {
-  setcompactview(true);
-  jQuery("#compactviewcheckbox").prop('checked', true);
-});
-
-});
