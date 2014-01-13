@@ -24,7 +24,7 @@ if(window.screen.availWidth >= 1600)
 {
   jQuery("div.ctl").eq(2).appendTo("#test")
   jQuery("div.ctl").eq(2).removeAttr("style")
-  jQuery("div.ctl").eq(2).css({"right":"150px","position":"absolute"});
+  jQuery("div.ctl").eq(2).css({"left":"1050px","position":"absolute"});
   jQuery("#wfcdiv0").css({"width":"1050px"});
 }
 
