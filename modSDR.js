@@ -16,8 +16,8 @@ function whenAvailable(name, callback) {
 whenAvailable("jQuery", function(t){
 
 // Hide Logbook
+jQuery("div.ctl").eq(6).hide()
 jQuery("div.ctl").eq(7).hide()
-jQuery("div.ctl").eq(8).hide()
 
 //Move saved frequencies
 jQuery("div.ctl").eq(2).appendTo("#test")
