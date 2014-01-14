@@ -22,9 +22,12 @@ jQuery("div.ctl").eq(7).hide()
 //Move saved frequencies if there is enough vertical space
 if(window.screen.availWidth >= 1600)
 {
-  jQuery("div.ctl").eq(2).appendTo("#test")
-  jQuery("div.ctl").eq(2).removeAttr("style")
-  jQuery("div.ctl").eq(2).css({"left":"1050px","position":"absolute"});
+  jQuery("form[name='freqform']").appendTo("#test");
+  jQuery("form[name='freqform']").css({"left":"1050px","position":"absolute"});
+  jQuery("form[name='freqform']").appendTo("#test");
+  //jQuery("div.ctl").eq(2).appendTo("#test")
+  //jQuery("div.ctl").eq(2).removeAttr("style")
+  //jQuery("div.ctl").eq(2).css({"left":"1050px","position":"absolute"});
   jQuery("#wfcdiv0").css({"width":"1050px"});
 }
 
