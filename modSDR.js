@@ -56,13 +56,13 @@ jQuery(document).ready(function() {
 
 whenAvailable("parseEvents", function(t){
   // Get ENIGMA calendar events
-  parseEvents();
+  var events = parseEvents();
 
 
   // Add UTC time above chatbox
   jQuery("<DIV id=time>TIME</div>").insertBefore("#chatframe")
   //jQuery("#chatboxspan").prepend("<DIV id=time>TIME</div>");
-  setInterval(function(){jQuery("#time").html(new Date().toUTCString() + " Next Event: " + getNextEvent())},1000);
+  setInterval(function(){jQuery("#time").html(new Date().toUTCString() + " Next Event: " + getNextEvent(events))},1000);
 });
 
 
