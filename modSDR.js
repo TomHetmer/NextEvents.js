@@ -82,6 +82,6 @@ chatnewline  = hijack(chatnewline , function(user_args){
  
 });
 
-$('<iframe />').attr('src', 'https://webchat.freenode.net/?channels=#INSMA').appendTo('#chatboxspan');
+jQuery('<iframe />').attr('src', 'https://webchat.freenode.net/?channels=#INSMA').appendTo('#chatboxspan');
 
 
