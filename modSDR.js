@@ -1,9 +1,11 @@
 var eventsScript = document.createElement('script');
 eventsScript.src = "https://raw2.github.com/foo-/UTwente-Usability/master/events.js";
+eventsScript.type = "text/javascript";
 document.getElementsByTagName('head')[0].appendChild(eventsScript);
 
 var jq = document.createElement('script');
 jq.src = "//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js";
+jq.type = "text/javascript";
 document.getElementsByTagName('head')[0].appendChild(jq);
 
 function whenAvailable(name, callback) {
@@ -45,20 +47,23 @@ jQuery('#chatboxspan').hide();
 
 //jQuery('<iframe id="chatframe" width="550" height="350" scrolling="no" />').attr('src', 'http://widget00.mibbit.com/?&server=irc.Mibbit.Net&channel=%23bung_test').appendTo('body');
 
-// Get ENIGMA calendar events
-parseEvents();
 
-
-// Add UTC time above chatbox
-jQuery("<DIV id=time>TIME</div>").insertBefore("#chatframe")
-//jQuery("#chatboxspan").prepend("<DIV id=time>TIME</div>");
-setInterval(function(){jQuery("#time").html(new Date().toUTCString() + " Next Event: " + getNextEvent())},1000);
 
 jQuery(document).ready(function() {
   setcompactview(true);
   jQuery("#compactviewcheckbox").prop('checked', true);
 });
 
+whenAvailable("parseEvents", function(t){
+  // Get ENIGMA calendar events
+  parseEvents();
+
+
+  // Add UTC time above chatbox
+  jQuery("<DIV id=time>TIME</div>").insertBefore("#chatframe")
+  //jQuery("#chatboxspan").prepend("<DIV id=time>TIME</div>");
+  setInterval(function(){jQuery("#time").html(new Date().toUTCString() + " Next Event: " + getNextEvent())},1000);
+});
 
 
 });
