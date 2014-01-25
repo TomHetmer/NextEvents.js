@@ -44,9 +44,7 @@ jQuery(document).ready(function() {
   jQuery("#compactviewcheckbox").prop('checked', true);
 });
 
-jQuery('<iframe id="chatframe" width="550" height="350"/>').attr('src', 'http://webchat.freenode.net/?channels=#INSMA').appendTo('body');
-var lastControl = jQuery("div.ctl").eq(5)
-jQuery('#chatframe').insertAfter(lastControl)
+jQuery('<iframe id="chatframe" width="550" height="350"/>').attr('src', 'http://webchat.freenode.net/?channels=#INSMA').insertAfter("form[name='form1']");
 jQuery('#chatboxspan').hide();
 
 //jQuery('<iframe id="chatframe" width="550" height="350" scrolling="no" />').attr('src', 'http://widget00.mibbit.com/?&server=irc.Mibbit.Net&channel=%23bung_test').appendTo('body');
