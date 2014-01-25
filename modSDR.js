@@ -44,10 +44,10 @@ jQuery(document).ready(function() {
   jQuery("#compactviewcheckbox").prop('checked', true);
 });
 
-jQuery('<iframe id="chatframe" width="70%" height="300px"/>').attr('src', 'http://webchat.freenode.net/?channels=#INSMA').appendTo('body');
-var lastControl = jQuery("div.ctl").eq(5)
+//jQuery('<iframe id="chatframe" width="70%" height="300px"/>').attr('src', 'http://webchat.freenode.net/?channels=#INSMA').appendTo('body');
+//var lastControl = jQuery("div.ctl").eq(5)
 //jQuery('#chatframe').insertAfter(lastControl)
-jQuery('#chatboxspan').hide();
+//jQuery('#chatboxspan').hide();
 
 });
 
