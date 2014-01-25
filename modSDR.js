@@ -49,7 +49,7 @@ jQuery('#chatboxspan').hide();
 // Add UTC time above chatbox
 jQuery("<DIV id=time>TIME</div>").insertBefore("#chatframe")
 //jQuery("#chatboxspan").prepend("<DIV id=time>TIME</div>");
-setInterval(function(){jQuery("#time").html(new Date().toUTCString())},1000);
+setInterval(function(){jQuery("#time").html(new Date().toUTCString() + " Next Event: " + getNextEvent())},1000);
 
 jQuery(document).ready(function() {
   setcompactview(true);
