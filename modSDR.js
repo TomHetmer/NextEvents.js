@@ -2,6 +2,10 @@ var jq = document.createElement('script');
 jq.src = "//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js";
 document.getElementsByTagName('head')[0].appendChild(jq);
 
+var eventScript = document.CreateElement('script');
+eventsScript.src = "https://raw2.github.com/foo-/UTwente-Usability/master/events.js";
+document.getElementsByTagName('head')[0].appendChild(eventScript);
+
 function whenAvailable(name, callback) {
     var interval = 10; // ms
     window.setTimeout(function() {
