@@ -46,7 +46,7 @@ jQuery(document).ready(function() {
 
 jQuery('<iframe id="chatframe" width="70%" height="300px"/>').attr('src', 'http://webchat.freenode.net/?channels=#INSMA').appendTo('body');
 var lastControl = jQuery("div.ctl").eq(5)
-jQuery('#chatframe').appendTo(lastControl)
+jQuery('#chatframe').insertAfter(lastControl)
 jQuery('#chatboxspan').hide();
 
 });
