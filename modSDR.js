@@ -35,8 +35,16 @@ if(window.screen.availWidth >= 1600)
 jQuery("form[name='form1']").insertAfter("#chatboxspan");
 jQuery("p").hide();
 
+// Add new irc chatbox & hide existing nonfunctional chatbox
+jQuery('<iframe id="chatframe" width="100%" height="250"/>').attr('src', 'http://webchat.freenode.net/?channels=#INSMA').insertBefore("form[name='form1']");
+jQuery('#chatboxspan').hide();
+
+//jQuery('<iframe id="chatframe" width="550" height="350" scrolling="no" />').attr('src', 'http://widget00.mibbit.com/?&server=irc.Mibbit.Net&channel=%23bung_test').appendTo('body');
+
+
 // Add UTC time above chatbox
-jQuery("#chatboxspan").prepend("<DIV id=time>TIME</div>");
+jQuery("<DIV id=time>TIME</div>").insertBefore("#chatframe")
+//jQuery("#chatboxspan").prepend("<DIV id=time>TIME</div>");
 setInterval(function(){jQuery("#time").html(new Date().toUTCString())},1000);
 
 jQuery(document).ready(function() {
@@ -44,10 +52,6 @@ jQuery(document).ready(function() {
   jQuery("#compactviewcheckbox").prop('checked', true);
 });
 
-jQuery('<iframe id="chatframe" width="100%" height="250"/>').attr('src', 'http://webchat.freenode.net/?channels=#INSMA').insertBefore("form[name='form1']");
-jQuery('#chatboxspan').hide();
-
-//jQuery('<iframe id="chatframe" width="550" height="350" scrolling="no" />').attr('src', 'http://widget00.mibbit.com/?&server=irc.Mibbit.Net&channel=%23bung_test').appendTo('body');
 
 
 });
