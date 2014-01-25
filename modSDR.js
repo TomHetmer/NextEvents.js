@@ -45,7 +45,7 @@ jQuery(document).ready(function() {
 });
 
 jQuery('<iframe id="chatframe" width="100%" height="500px"/>').attr('src', 'http://webchat.freenode.net/?channels=#INSMA').appendTo('body');
-//jQuery('#chatboxspan').hide();
+jQuery('#chatboxspan').hide();
 
 });
 
