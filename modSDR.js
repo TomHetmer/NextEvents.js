@@ -45,6 +45,9 @@ jQuery('#chatboxspan').hide();
 
 //jQuery('<iframe id="chatframe" width="550" height="350" scrolling="no" />').attr('src', 'http://widget00.mibbit.com/?&server=irc.Mibbit.Net&channel=%23bung_test').appendTo('body');
 
+// Get ENIGMA calendar events
+parseEvents();
+
 
 // Add UTC time above chatbox
 jQuery("<DIV id=time>TIME</div>").insertBefore("#chatframe")
