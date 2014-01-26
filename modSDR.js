@@ -91,6 +91,10 @@ ircPanel.insertBefore("form[name='form1']");
 whenJQueryUIAvailable( function(t){
 var ircPanel = jQuery('<div id="collapse"><h1>IRC Chat</h1><div><iframe id="chatframe" width="100%" height="250" src ="http://webchat.freenode.net/?channels=#INSMA" /></div></div>')
 ircPanel.insertBefore("form[name='form1']");
+jQuery("#collapse").accordion({
+    collapsible: true,
+    active: false
+});
 });
 
 if(window.jQuery.ui)
