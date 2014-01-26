@@ -14,7 +14,7 @@ function loadfile(filename, filetype){
   fileref.setAttribute("href", filename)
  }
  console.log("loading file " + filename + " of type " + filetype);
- console.log("filered exists? " + fileref);
+ console.log("fileref exists? " + fileref);
  if (typeof fileref!="undefined")
   document.getElementsByTagName("head")[0].appendChild(fileref)
 }
@@ -71,10 +71,10 @@ jQuery("p").hide();
 
 // Add new irc chatbox & hide existing nonfunctional chatbox
 whenJQueryUIAvailable( function(t){
-console.log('jQuery.ui loaded? ' + jQuery.ui);
-var ircPanel = jQuery('<div id="collapse"><h3>IRC Chat</h3><div><iframe id="chatframe" width="100%" height="250" src ="http://webchat.freenode.net/?channels=#INSMA" /></div></div>')
-ircPanel.insertBefore("form[name='form1']");
-jQuery("#collapse").accordion({
+  console.log('Waiting for jQueryUI. Loaded? ' + jQuery.ui);
+  var ircPanel = jQuery('<div id="collapse"><h3>IRC Chat</h3><div><iframe id="chatframe" width="99%" height="250" src ="http://webchat.freenode.net/?channels=#INSMA" /></div></div>')
+  ircPanel.insertBefore("form[name='form1']");
+  jQuery("#collapse").accordion({
     collapsible: true,
     active: false
 });
