@@ -26,7 +26,7 @@ function loadfile(filename, filetype){
   document.getElementsByTagName("head")[0].appendChild(fileref)
 }
 
-loadfile('//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', "js")';
+loadfile("//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js", "js");
 loadfile('https://raw2.github.com/foo-/UTwente-Usability/master/events.js', "js");
 loadfile('//code.jquery.com/jquery-1.10.2.js', "js");
 loadfile('//code.jquery.com/ui/1.10.4/jquery-ui.js', "js");
