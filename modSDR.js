@@ -86,6 +86,7 @@ jQuery("#collapse").accordion({
     active: false
 });
 jQuery("div.ctl").draggable();
+jQuery("#collapse").draggable();
 jQuery(".ui-accordion-content").css("padding","0px");
 jQuery("#time").insertBefore("#collapse")
 });
