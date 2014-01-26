@@ -43,6 +43,17 @@ function whenAvailable(name, callback) {
     }, interval);
 }
 
+function whenJQueryUIAvailable(callback) {
+    var interval = 10; // ms
+    window.setTimeout(function() {
+        if (jQuery.ui) {
+            callback(window[name]);
+        } else {
+            window.setTimeout(arguments.callee, interval);
+        }
+    }, interval);
+}
+
 whenAvailable("jQuery", function(t){
 
 // Hide Logbook
@@ -66,11 +77,21 @@ jQuery("form[name='form1']").insertAfter("#chatboxspan");
 jQuery("p").hide();
 
 // Add new irc chatbox & hide existing nonfunctional chatbox
+
+whenJQueryUIAvailable( function(t){
+var ircPanel = jQuery('<div id="collapse"><h1>IRC Chat</h1><div><iframe id="chatframe" width="100%" height="250" src ="http://webchat.freenode.net/?channels=#INSMA" /></div></div>')
+ircPanel.insertBefore("form[name='form1']");
+});
+
 console.log('jQuery.ui loaded? ' + jQuery.ui);
 /*
 var ircPanel = jQuery('<div id="collapse"><h1>IRC Chat</h1><div><iframe id="chatframe" width="100%" height="250" src ="http://webchat.freenode.net/?channels=#INSMA" /></div></div>')
 ircPanel.insertBefore("form[name='form1']");
 
+whenJQueryUIAvailable( function(t){
+var ircPanel = jQuery('<div id="collapse"><h1>IRC Chat</h1><div><iframe id="chatframe" width="100%" height="250" src ="http://webchat.freenode.net/?channels=#INSMA" /></div></div>')
+ircPanel.insertBefore("form[name='form1']");
+});
 
 if(window.jQuery.ui)
 {
