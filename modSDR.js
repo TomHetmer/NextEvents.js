@@ -92,7 +92,7 @@ whenAvailable("parseEvents", function(t){
 
 
   // Add UTC time above chatbox
-  jQuery("<DIV id=time>TIME</div>").insertBefore("#chatframe")
+  jQuery("<DIV id=time>TIME</div>").insertBefore("#collapse")
   //jQuery("#chatboxspan").prepend("<DIV id=time>TIME</div>");
   setInterval(function(){jQuery("#time").html(new Date().toUTCString() + " Next Event: " + getNextEvent(events))},1000);
 });
