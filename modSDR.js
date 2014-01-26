@@ -1,4 +1,4 @@
-var currentVersion = ".007 Experimental";
+var currentVersion = ".008 Experimental";
 console.log(currentVersion);
 
 function loadfile(filename, filetype){
@@ -77,7 +77,7 @@ jQuery("#collapse").accordion({
     active: false
 });
 jQuery("div.ctl").draggable();
-jQuery("#collapse").draggable();
+//jQuery("#collapse").draggable();
 jQuery(".ui-accordion-content").css("padding","0px");
 jQuery("#time").insertBefore("#collapse")
 });
