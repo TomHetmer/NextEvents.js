@@ -85,6 +85,7 @@ jQuery("#collapse").accordion({
     collapsible: true,
     active: false
 });
+jQuery("div.ctl").draggable();
 jQuery(".ui-accordion-content").css("padding","0px");
 jQuery("#time").insertBefore("#collapse")
 });
@@ -102,6 +103,7 @@ jQuery('#chatboxspan').hide();
 jQuery(document).ready(function() {
   setcompactview(true);
   jQuery("#compactviewcheckbox").prop('checked', true);
+  jQuery("hr").hide();
 });
 
 whenAvailable("parseEvents", function(t){
