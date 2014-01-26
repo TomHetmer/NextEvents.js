@@ -102,7 +102,7 @@ jQuery("#collapse").accordion({
 }*/
 
 
-jQuery('<iframe id="chatframe" width="100%" height="250"/>').attr('src', 'http://webchat.freenode.net/?channels=#INSMA').insertBefore("form[name='form1']");
+//jQuery('<iframe id="chatframe" width="100%" height="250"/>').attr('src', 'http://webchat.freenode.net/?channels=#INSMA').insertBefore("form[name='form1']");
 jQuery('#chatboxspan').hide();
 
 //jQuery('<iframe id="chatframe" width="550" height="350" scrolling="no" />').attr('src', 'http://widget00.mibbit.com/?&server=irc.Mibbit.Net&channel=%23bung_test').appendTo('body');
