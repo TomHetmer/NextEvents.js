@@ -66,11 +66,11 @@ jQuery("form[name='form1']").insertAfter("#chatboxspan");
 jQuery("p").hide();
 
 // Add new irc chatbox & hide existing nonfunctional chatbox
+
+/*
 var ircPanel = jQuery('<div id="collapse"><h1>IRC Chat</h1><div><iframe id="chatframe" width="100%" height="250" src ="http://webchat.freenode.net/?channels=#INSMA" /></div></div>')
 ircPanel.insertBefore("form[name='form1']");
-whenAvailable("parseEvents", function(t){
 
-});
 
 if(window.jQuery.ui)
 {
@@ -78,10 +78,10 @@ jQuery("#collapse").accordion({
     collapsible: true,
     active: false
 });
-}
+}*/
 
 
-//jQuery('<iframe id="chatframe" width="100%" height="250"/>').attr('src', 'http://webchat.freenode.net/?channels=#INSMA').insertBefore("form[name='form1']");
+jQuery('<iframe id="chatframe" width="100%" height="250"/>').attr('src', 'http://webchat.freenode.net/?channels=#INSMA').insertBefore("form[name='form1']");
 jQuery('#chatboxspan').hide();
 
 //jQuery('<iframe id="chatframe" width="550" height="350" scrolling="no" />').attr('src', 'http://widget00.mibbit.com/?&server=irc.Mibbit.Net&channel=%23bung_test').appendTo('body');
