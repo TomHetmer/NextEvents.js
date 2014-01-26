@@ -1,14 +1,5 @@
-/*
-var eventsScript = document.createElement('script');
-eventsScript.src = "https://raw2.github.com/foo-/UTwente-Usability/master/events.js";
-eventsScript.type = "text/javascript";
-document.getElementsByTagName('head')[0].appendChild(eventsScript);
-
-var jq = document.createElement('script');
-jq.src = "//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js";
-jq.type = "text/javascript";
-document.getElementsByTagName('head')[0].appendChild(jq);
-*/
+var currentVersion = ".007 Experimental";
+console.log(currentVersion);
 
 function loadfile(filename, filetype){
  if (filetype=="js"){ //if filename is a external JavaScript file
