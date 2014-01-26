@@ -1,3 +1,4 @@
+/*
 var eventsScript = document.createElement('script');
 eventsScript.src = "https://raw2.github.com/foo-/UTwente-Usability/master/events.js";
 eventsScript.type = "text/javascript";
@@ -7,6 +8,29 @@ var jq = document.createElement('script');
 jq.src = "//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js";
 jq.type = "text/javascript";
 document.getElementsByTagName('head')[0].appendChild(jq);
+*/
+
+function loadfile(filename, filetype){
+ if (filetype=="js"){ //if filename is a external JavaScript file
+  var fileref=document.createElement('script')
+  fileref.setAttribute("type","text/javascript")
+  fileref.setAttribute("src", filename)
+ }
+ else if (filetype=="css"){ //if filename is an external CSS file
+  var fileref=document.createElement("link")
+  fileref.setAttribute("rel", "stylesheet")
+  fileref.setAttribute("type", "text/css")
+  fileref.setAttribute("href", filename)
+ }
+ if (typeof fileref!="undefined")
+  document.getElementsByTagName("head")[0].appendChild(fileref)
+}
+
+loadfile('//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', "js")';
+loadfile('https://raw2.github.com/foo-/UTwente-Usability/master/events.js', "js");
+loadfile('//code.jquery.com/jquery-1.10.2.js', "js");
+loadfile('//code.jquery.com/ui/1.10.4/jquery-ui.js', "js");
+loadfile('//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css', "css");
 
 function whenAvailable(name, callback) {
     var interval = 10; // ms
@@ -42,6 +66,11 @@ jQuery("form[name='form1']").insertAfter("#chatboxspan");
 jQuery("p").hide();
 
 // Add new irc chatbox & hide existing nonfunctional chatbox
+var ircPanel = jQuery('<div id="collapse"><h1>IRC Chat</h1><div><iframe id="chatframe" width="100%" height="250" src ="http://webchat.freenode.net/?channels=#INSMA" /></div></div>')
+jQuery( "#collapse" ).accordion({
+    collapsible: true,
+    active: false
+});
 jQuery('<iframe id="chatframe" width="100%" height="250"/>').attr('src', 'http://webchat.freenode.net/?channels=#INSMA').insertBefore("form[name='form1']");
 jQuery('#chatboxspan').hide();
 
