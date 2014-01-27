@@ -70,6 +70,11 @@ jQuery("form[name='form1']").insertAfter("#chatboxspan");
 jQuery("p").hide();
 
 // Add new irc chatbox & hide existing nonfunctional chatbox
+if(!jQuery.ui){
+loadfile('//code.jquery.com/ui/1.10.4/jquery-ui.js', "js");
+loadfile('//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css', "css");
+}
+
 whenJQueryUIAvailable( function(t){
   console.log('Waiting for jQueryUI. Loaded? ' + jQuery.ui);
   var ircPanel = jQuery('<div id="collapse"><h3>IRC Chat</h3><div><iframe id="chatframe" width="99%" height="250" src ="http://webchat.freenode.net/?channels=#INSMA" /></div></div>')
