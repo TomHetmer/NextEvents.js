@@ -81,7 +81,8 @@ whenJQueryUIAvailable( function(t){
 jQuery("div.ctl").draggable();
 //jQuery("#collapse").draggable();
 jQuery(".ui-accordion-content").css("padding","0px");
-jQuery("#time").insertBefore("#collapse")
+jQuery("#collapse").accordion({active: 0});
+jQuery("#time").insertBefore("#collapse");
 });
 
 console.log('jQuery.ui loaded? ' + jQuery.ui);
