@@ -115,7 +115,7 @@ whenAvailable("parseEvents", function(t){
 });
 
 // Hijack chatbox
-
+/*
 function hijack(method, cb){
  
 	// A function needs to be passed or there will be hell to pay
@@ -149,3 +149,4 @@ chatnewline  = hijack(chatnewline , function(user_args){
 	return args;
  
 });
+*/
