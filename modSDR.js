@@ -1,4 +1,4 @@
-var currentVersion = ".008 Experimental";
+var currentVersion = ".009 Experimental";
 console.log(currentVersion);
 
 function loadfile(filename, filetype){
@@ -51,7 +51,7 @@ whenAvailable("jQuery", function(t){
 
 // Hide Logbook
 jQuery("div.ctl").eq(6).hide()
-jQuery("div.ctl").eq(7).hide()
+jQuery("div.ctl").eq(8).hide()
 
 //Move saved frequencies if there is enough vertical space
 if(window.screen.availWidth >= 1600)
